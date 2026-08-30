@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Shehzad Sweets &amp; Bakers</title>
+    <meta name="description" content="Contact Shehzad Sweets & Bakers — call, WhatsApp or visit us in Bangla Gogera." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ============================================================
+           SHEHZAD SWEETS & BAKERS — MILA MIAMI INSPIRED
+           Same design system as all other pages
+           ============================================================ */
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #0A0807;
+            color: #F5F0EB;
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 15.5px;
+            line-height: 1.65;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+        }
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 800;
+            line-height: 1.15;
+            color: #FFFFFF;
+            letter-spacing: -0.01em;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #13100E;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C9A84C;
+            border-radius: 8px;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #C9A84C;
+        }
+        .eyebrow::before {
+            content: '';
+            width: 28px;
+            height: 1.5px;
+            background: #C9A84C;
+            border-radius: 4px;
+        }
+
+        /* ── buttons (SQUARE, MILA style) ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 14px 32px;
+            border-radius: 0;
+            border: 1px solid transparent;
+            transition: all 0.25s ease;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            min-width: 140px;
+        }
+        .btn svg {
+            width: 17px;
+            height: 17px;
+            flex-shrink: 0;
+        }
+
+        .btn-primary {
+            background: #8B1A1A;
+            color: #fff;
+            box-shadow: 0 8px 24px -8px rgba(139, 26, 26, 0.5);
+        }
+        .btn-primary:hover {
+            background: #6E1414;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px -8px rgba(139, 26, 26, 0.6);
+        }
+
+        .btn-gold {
+            background: #C9A84C;
+            color: #0A0807;
+            box-shadow: 0 8px 24px -8px rgba(201, 168, 76, 0.4);
+        }
+        .btn-gold:hover {
+            background: #D4B85E;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px -8px rgba(201, 168, 76, 0.5);
+        }
+
+        .btn-outline {
+            border-color: rgba(245, 240, 235, 0.25);
+            color: #F5F0EB;
+            background: transparent;
+        }
+        .btn-outline:hover {
+            border-color: #C9A84C;
+            color: #C9A84C;
+            background: rgba(201, 168, 76, 0.06);
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 12px;
+            min-width: 100px;
+        }
+        .btn-block {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* ── HEADER ── */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            background: rgba(10, 8, 7, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.10);
+        }
+
+        .header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 24px;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .brand-badge {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        .brand-text strong {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: -0.01em;
+        }
+        .brand-text strong em {
+            color: #C9A84C;
+            font-style: normal;
+        }
+        .brand-text span {
+            font-size: 8.5px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #C9A84C;
+            margin-top: 2px;
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            color: #A89888;
+            position: relative;
+            padding: 6px 0;
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #C9A84C;
+        }
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #C9A84C;
+            border-radius: 2px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .cart-btn {
+            position: relative;
+            width: 42px;
+            height: 42px;
+            border-radius: 0;
+            background: #1C1714;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(201, 168, 76, 0.12);
+            transition: border-color 0.2s ease;
+        }
+        .cart-btn:hover {
+            border-color: #C9A84C;
+        }
+        .cart-btn svg {
+            width: 19px;
+            height: 19px;
+            color: #C9A84C;
+        }
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #8B1A1A;
+            color: #fff;
+            font-size: 9.5px;
+            font-weight: 700;
+            width: 19px;
+            height: 19px;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(139, 26, 26, 0.4);
+        }
+
+        .hamburger {
+            display: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 0;
+            background: #1C1714;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(201, 168, 76, 0.10);
+            flex-shrink: 0;
+        }
+        .hamburger svg {
+            width: 19px;
+            height: 19px;
+            color: #C9A84C;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background: #13100E;
+            border-top: 1px solid rgba(201, 168, 76, 0.06);
+            padding: 8px 24px 22px;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        .mobile-nav a {
+            padding: 14px 2px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #F5F0EB;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.05);
+        }
+        .mobile-nav a.active {
+            color: #C9A84C;
+        }
+        .mobile-nav .btn {
+            margin-top: 16px;
+        }
+        body.nav-open .mobile-nav {
+            display: flex;
+        }
+
+        /* ── PAGE HERO ── */
+        .page-hero {
+            padding: 70px 0 56px;
+            background:
+                radial-gradient(circle at 12% 20%, rgba(139, 26, 26, 0.18), transparent 45%),
+                radial-gradient(circle at 90% 10%, rgba(201, 168, 76, 0.08), transparent 40%);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+            text-align: center;
+        }
+        .page-hero .eyebrow {
+            justify-content: center;
+        }
+        .page-hero h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            margin-top: 16px;
+        }
+        .page-hero p {
+            margin-top: 14px;
+            color: #A89888;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 15.5px;
+        }
+
+        /* ── Sections ── */
+        .section {
+            padding: 78px 0;
+        }
+        .section-alt {
+            background: #13100E;
+        }
+
+        /* ── Contact Grid ── */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: flex-start;
+        }
+
+        .contact-info-card {
+            background: #1C1714;
+            border: 1px solid rgba(201, 168, 76, 0.06);
+            border-radius: 0;
+            padding: 32px;
+        }
+
+        .contact-info-row {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.06);
+        }
+        .contact-info-row:last-child {
+            border-bottom: none;
+        }
+        .contact-info-row .ic {
+            width: 40px;
+            height: 40px;
+            border-radius: 0;
+            background: rgba(201, 168, 76, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-info-row .ic svg {
+            width: 18px;
+            height: 18px;
+            color: #C9A84C;
+        }
+        .contact-info-row h5 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #C9A84C;
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .contact-info-row p,
+        .contact-info-row a {
+            font-size: 14.5px;
+            color: #F5F0EB;
+        }
+        .contact-info-row a:hover {
+            color: #C9A84C;
+        }
+
+        .map-embed {
+            border-radius: 0;
+            overflow: hidden;
+            border: 1px solid rgba(201, 168, 76, 0.06);
+            margin-top: 24px;
+        }
+        .map-embed iframe {
+            width: 100%;
+            height: 280px;
+            border: 0;
+            display: block;
+            filter: grayscale(0.3) invert(0.92) contrast(0.9);
+        }
+
+        /* ── Form Card ── */
+        .form-card {
+            background: #1C1714;
+            border: 1px solid rgba(201, 168, 76, 0.06);
+            border-radius: 0;
+            padding: 32px;
+        }
+        .form-card h3 {
+            font-size: 22px;
+            margin-bottom: 6px;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .form-card p {
+            color: #A89888;
+            font-size: 13.5px;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 12.5px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #A89888;
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            background: #13100E;
+            border: 1px solid rgba(201, 168, 76, 0.06);
+            border-radius: 0;
+            padding: 13px 15px;
+            color: #F5F0EB;
+            font-size: 14.5px;
+            transition: border-color 0.2s ease;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #C9A84C;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        /* ── CTA band ── */
+        .cta-band {
+            background: linear-gradient(135deg, #8B1A1A 0%, #5E1111 100%);
+            padding: 72px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(201, 168, 76, 0.06), transparent 60%);
+            pointer-events: none;
+        }
+        .cta-band h2 {
+            color: #fff;
+            font-size: clamp(30px, 4.6vw, 46px);
+            position: relative;
+        }
+        .cta-band p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 12px;
+            font-size: 15.5px;
+            position: relative;
+        }
+        .cta-band .btn {
+            margin-top: 28px;
+            position: relative;
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: #13100E;
+            border-top: 1px solid rgba(201, 168, 76, 0.06);
+            padding: 60px 0 28px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.06);
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .footer-brand strong {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 19px;
+            color: #FFFFFF;
+        }
+        .footer-brand strong em {
+            color: #C9A84C;
+            font-style: normal;
+        }
+        .footer-col p {
+            color: #A89888;
+            font-size: 13.5px;
+            line-height: 1.7;
+            max-width: 260px;
+        }
+        .footer-col h5 {
+            font-size: 12px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #C9A84C;
+            margin-bottom: 16px;
+            font-weight: 700;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .footer-col a {
+            display: block;
+            font-size: 13.5px;
+            color: #A89888;
+            padding: 5px 0;
+            transition: color 0.2s ease;
+        }
+        .footer-col a:hover {
+            color: #C9A84C;
+        }
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border-radius: 0;
+            background: #1C1714;
+            border: 1px solid rgba(201, 168, 76, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+        .footer-social a:hover {
+            border-color: #C9A84C;
+            background: rgba(201, 168, 76, 0.06);
+        }
+        .footer-social a svg {
+            width: 16px;
+            height: 16px;
+            color: #C9A84C;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-top: 22px;
+            font-size: 12px;
+            color: #5A4D42;
+        }
+
+        /* ── WhatsApp FAB ── */
+        .wa-fab {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 300;
+            width: 60px;
+            height: 60px;
+            border-radius: 0;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 14px 32px -10px rgba(37, 211, 102, 0.55);
+            transition: transform 0.2s ease;
+            animation: pulse 2.8s ease-in-out infinite;
+        }
+        .wa-fab:hover {
+            transform: scale(1.05);
+        }
+        .wa-fab svg {
+            width: 30px;
+            height: 30px;
+            color: #fff;
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.06);
+            }
+        }
+
+        /* ── Toast ── */
+        .toast {
+            position: fixed;
+            bottom: 96px;
+            right: 24px;
+            z-index: 400;
+            background: #1C1714;
+            border: 1px solid #C9A84C;
+            color: #F5F0EB;
+            padding: 14px 22px;
+            border-radius: 0;
+            font-size: 13.5px;
+            font-weight: 600;
+            box-shadow: 0 20px 44px -12px rgba(0, 0, 0, 0.7);
+            transform: translateY(16px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 980px) {
+            .nav-links,
+            .header-actions .cart-btn {
+                display: none;
+            }
+            .header-actions {
+                gap: 8px;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-hero h1 {
+                font-size: clamp(28px, 8vw, 38px);
+            }
+            .page-hero p {
+                font-size: 14px;
+            }
+            .brand-text strong {
+                font-size: 16px;
+            }
+            .brand-text span {
+                font-size: 7px;
+            }
+            .brand-badge {
+                width: 38px;
+                height: 38px;
+            }
+            .section {
+                padding: 56px 0;
+            }
+            .cta-band {
+                padding: 50px 0;
+            }
+            .contact-info-card,
+            .form-card {
+                padding: 20px;
+            }
+            .btn {
+                padding: 12px 20px;
+                font-size: 13px;
+                min-width: 120px;
+            }
+        }
+    </style>
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='29' fill='%238B1A1A' stroke='%23C9A84C' stroke-width='2'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+    <div id="icon-sprite"></div>
+    <header id="site-header" class="site-header"></header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="eyebrow">Contact</span>
+            <h1>Let's Talk</h1>
+            <p>Questions, bulk orders, hall bookings or feedback reach us any way that is easiest for you.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section">
+        <div class="container contact-grid">
+
+            <!-- Contact Info -->
+            <div>
+                <div class="contact-info-card">
+                    <div class="contact-info-row">
+                        <div class="ic"><svg><use href="#ic-pin" /></svg></div>
+                        <div>
+                            <h5>Visit Us</h5>
+                            <p id="addr"></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-row">
+                        <div class="ic"><svg><use href="#ic-phone" /></svg></div>
+                        <div>
+                            <h5>Call</h5>
+                            <a id="phoneLink" href="#"></a>
+                        </div>
+                    </div>
+                    <div class="contact-info-row">
+                        <div class="ic"><svg><use href="#ic-whatsapp" /></svg></div>
+                        <div>
+                            <h5>WhatsApp</h5>
+                            <a id="waLink" href="#" target="_blank">Chat with us</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-row">
+                        <div class="ic"><svg><use href="#ic-clock" /></svg></div>
+                        <div>
+                            <h5>Minimum Order</h5>
+                            <p id="minOrderTxt"></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-row">
+                        <div class="ic"><svg><use href="#ic-fb" /></svg></div>
+                        <div>
+                            <h5>Facebook</h5>
+                            <a id="fbLink" href="#" target="_blank">Follow our page</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-embed">
+                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=73.14%2C30.56%2C73.22%2C30.61&layer=mapnik&marker=30.58%2C73.18" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <a href="#" id="directionsLink" target="_blank" class="btn btn-outline btn-block" style="margin-top:14px;">
+                    <svg><use href="#ic-pin" /></svg>Get Directions
+                </a>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="form-card">
+                <h3>Send a Message</h3>
+                <p>This opens WhatsApp with your message pre-filled quick and direct.</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="cf-name">Your Name</label>
+                        <input type="text" id="cf-name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-phone">Phone Number</label>
+                        <input type="tel" id="cf-phone" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-message">Message</label>
+                        <textarea id="cf-message" required placeholder="Tell us what you need — order, booking, feedback..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <svg><use href="#ic-whatsapp" /></svg>Send via WhatsApp
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+        <div class="container">
+            <h2>Need a quick answer?</h2>
+            <p>Reach out on WhatsApp we reply fast.</p>
+            <a href="#" class="btn btn-gold wa-order-link"><svg><use href="#ic-whatsapp" /></svg>Chat Now</a>
+        </div>
+    </section>
+
+    <footer id="site-footer"></footer>
+
+    <script>
+        /* ============================================================
+           BRAND CONFIG
+           ============================================================ */
+
+        const BRAND = {
+            name: "Shehzad Sweets & Bakers",
+            tagline: "The Taste You Never Forget",
+            phone: "03043737337",
+            whatsapp: "923043737337",
+            address: "Dhobi Bazar, Gogera Plaza, Near Ahl-e-Hadis Chowk, Bangla Gogera",
+            minOrder: 500,
+            facebook: "https://facebook.com/",
+            mapLink: "https://www.google.com/maps/search/?api=1&query=Shehzad+Sweets+Bakers+Dhobi+Bazar+Gogera+Plaza+Bangla+Gogera"
+        };
+
+        /* ============================================================
+           SHARED LAYOUT: header, footer, icon sprite, WhatsApp FAB
+           ============================================================ */
+
+        const ICON_SPRITE = `
+        <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+        <defs>
+          <symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></symbol>
+          <symbol id="ic-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.46-.15-.65.15-.2.29-.75.93-.92 1.12-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.08-.15-.65-1.58-.9-2.16-.24-.58-.48-.5-.65-.5-.17-.01-.37-.01-.56-.01-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.7-.7 1.94-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.2-.55-.34z"/><path d="M12 2a10 10 0 00-8.6 15.03L2 22l5.11-1.34A10 10 0 1012 2zm0 18.13a8.09 8.09 0 01-4.14-1.13l-.3-.18-3.08.81.82-3-.19-.31A8.13 8.13 0 1112 20.13z"/></symbol>
+          <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+          <symbol id="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+          <symbol id="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></symbol>
+          <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+          <symbol id="ic-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+          <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+          <symbol id="ic-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></symbol>
+          <symbol id="ic-bike" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M5.5 17.5L9 8h5l3 5.5M9 8L7 5H4"/><path d="M12 8l3 5.5h3.5"/></symbol>
+          <symbol id="ic-cake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 00-2-2H6a2 2 0 00-2 2v8"/><path d="M4 16h16"/><path d="M12 3v4M9 3v2M15 3v2"/><path d="M2 21h20"/></symbol>
+          <symbol id="ic-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></symbol>
+          <symbol id="ic-fire" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 3-2 4-2 7a3 3 0 006 0c0-1-.5-2-1-2 2 1 4 3.5 4 6.5A7 7 0 015 13.5C5 9 8 7 8 4c1.5 1 2 2.5 1.5 4C10.5 5.5 11 3.5 12 2z"/></symbol>
+          <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6 6L20 6"/></symbol>
+          <symbol id="ic-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0l-1 14a2 2 0 01-2 2H7a2 2 0 01-2-2L4 6"/></symbol>
+          <symbol id="ic-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+          <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></symbol>
+          <symbol id="ic-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></symbol>
+        </defs>
+        </svg>`;
+
+        function LOGO_SVG(cls) {
+            return `<svg class="${cls || ''}" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="29" fill="#8B1A1A"/>
+            <circle cx="30" cy="30" r="29" fill="none" stroke="#C9A84C" stroke-width="1.4"/>
+            <circle cx="30" cy="30" r="24.5" fill="none" stroke="#C9A84C" stroke-width="0.6" opacity="0.4"/>
+            <path d="M12 30a18 18 0 0136 0" fill="none" stroke="#C9A84C" stroke-width="0.6" opacity="0.3"/>
+            <path d="M12 30a18 18 0 0036 0" fill="none" stroke="#C9A84C" stroke-width="0.6" opacity="0.3"/>
+            <circle cx="30" cy="10.5" r="1.1" fill="#C9A84C"/>
+            <circle cx="30" cy="49.5" r="1.1" fill="#C9A84C"/>
+            <text x="30" y="39" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="25" fill="#E8D5A8" text-anchor="middle">S</text>
+          </svg>`;
+        }
+
+        function navLink(href, label) {
+            const current = window.location.pathname.split('/').pop() || 'index.html';
+            const isActive = current === href ? ' class="active"' : '';
+            return `<a href="${href}"${isActive}>${label}</a>`;
+        }
+
+        function buildHeader() {
+            const links = [
+                ['index.html', 'Home'],
+                ['menu.html', 'Menu'],
+                ['deals.html', 'Deals'],
+                ['cakes.html', 'Custom Cakes'],
+                ['services.html', 'Services'],
+                ['about.html', 'About'],
+                ['contact.html', 'Contact']
+            ];
+            return `
+          <div class="header-row">
+            <a href="index.html" class="brand">
+              ${LOGO_SVG('brand-badge')}
+              <span class="brand-text"><strong>Shehzad <em>Sweets</em> &amp; Bakers</strong><span>Fresh Pizza &amp; Fast Food</span></span>
+            </a>
+            <nav class="nav-links">${links.map(l => navLink(l[0], l[1])).join('')}</nav>
+            <div class="header-actions">
+              <a href="cart.html" class="cart-btn" aria-label="Cart"><svg><use href="#ic-cart"/></svg><span class="cart-count" id="cartCountBadge">0</span></a>
+              <a href="#" class="btn btn-primary btn-sm wa-order-link"><svg><use href="#ic-whatsapp"/></svg>Order</a>
+              <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><svg><use href="#ic-menu"/></svg></button>
+            </div>
+          </div>
+          <div class="mobile-nav" id="mobileNav">
+            ${links.map(l => navLink(l[0], l[1])).join('')}
+            <a href="cart.html">🛒 Cart (<span id="cartCountBadgeMobile">0</span>)</a>
+            <a href="#" class="btn btn-primary btn-block wa-order-link"><svg><use href="#ic-whatsapp"/></svg>Order on WhatsApp</a>
+          </div>`;
+        }
+
+        function buildFooter() {
+            return `
+          <div class="container">
+            <div class="footer-grid">
+              <div class="footer-col">
+                <div class="footer-brand">
+                  ${LOGO_SVG('brand-badge')}
+                  <strong>Shehzad <em>Sweets</em> &amp; Bakers</strong>
+                </div>
+                <p>Fresh pizza, burgers, shawarma, wings and family deals — fried and baked fresh, delivered hot across Bangla Gogera.</p>
+                <div class="footer-social">
+                  <a href="${BRAND.facebook}" target="_blank" aria-label="Facebook"><svg><use href="#ic-fb"/></svg></a>
+                  <a href="https://wa.me/${BRAND.whatsapp}" target="_blank" aria-label="WhatsApp"><svg><use href="#ic-whatsapp"/></svg></a>
+                </div>
+              </div>
+              <div class="footer-col">
+                <h5>Explore</h5>
+                <a href="menu.html">Full Menu</a>
+                <a href="deals.html">Value Deals</a>
+                <a href="cakes.html">Custom Cakes</a>
+                <a href="services.html">Services</a>
+              </div>
+              <div class="footer-col">
+                <h5>Company</h5>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Your Cart</a>
+              </div>
+              <div class="footer-col">
+                <h5>Get In Touch</h5>
+                <a href="tel:+${BRAND.phone}">📞 ${BRAND.phone}</a>
+                <a href="https://wa.me/${BRAND.whatsapp}" target="_blank">💬 WhatsApp Order</a>
+                <p style="margin-top:6px;">${BRAND.address}</p>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <span>© 2026 Shehzad Sweets &amp; Bakers. All rights reserved.</span>
+              <span>${BRAND.tagline}</span>
+            </div>
+          </div>`;
+        }
+
+        function initLayout() {
+            document.getElementById('icon-sprite').innerHTML = ICON_SPRITE;
+            document.getElementById('site-header').innerHTML = buildHeader();
+            document.getElementById('site-footer').innerHTML = buildFooter();
+
+            const fab = document.createElement('a');
+            fab.href =
+                `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent('Hi Shehzad Sweets & Bakers! I want to place an order.')}`;
+            fab.target = '_blank';
+            fab.className = 'wa-fab';
+            fab.setAttribute('aria-label', 'Order on WhatsApp');
+            fab.innerHTML = '<svg><use href="#ic-whatsapp"/></svg>';
+            document.body.appendChild(fab);
+
+            document.querySelectorAll('.wa-order-link').forEach(a => {
+                a.href =
+                    `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent('Hi Shehzad Sweets & Bakers! I want to place an order.')}`;
+                a.target = '_blank';
+            });
+
+            const hb = document.getElementById('hamburgerBtn');
+            if (hb) {
+                hb.addEventListener('click', () => {
+                    document.body.classList.toggle('nav-open');
+                    hb.innerHTML = document.body.classList.contains('nav-open') ?
+                        '<svg><use href="#ic-close"/></svg>' :
+                        '<svg><use href="#ic-menu"/></svg>';
+                });
+            }
+
+            updateCartBadge();
+        }
+
+        document.addEventListener('DOMContentLoaded', initLayout);
+
+        /* ============================================================
+           CART & TOAST
+           ============================================================ */
+
+        const CART_KEY = 'sfp_cart';
+
+        function getCart() {
+            try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch (e) { return []; }
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem(CART_KEY, JSON.stringify(cart));
+            updateCartBadge();
+        }
+
+        function updateCartBadge() {
+            const count = getCart().reduce((sum, i) => sum + i.qty, 0);
+            document.querySelectorAll('#cartCountBadge,#cartCountBadgeMobile').forEach(el => {
+                if (el) el.textContent = count;
+            });
+        }
+
+        function addToCart(item) {
+            const cart = getCart();
+            const existing = cart.find(i => i.id === item.id && i.variant === item.variant);
+            if (existing) { existing.qty += 1; } else { cart.push({ id: item.id, name: item.name, variant: item.variant || '',
+                    price: item.price, image: item.image, qty: 1 }); }
+            saveCart(cart);
+            showToast(`${item.name}${item.variant ? ' ('+item.variant+')' : ''} added to cart`);
+        }
+
+        function showToast(msg) {
+            let toast = document.querySelector('.toast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.className = 'toast';
+                document.body.appendChild(toast);
+            }
+            toast.textContent = msg;
+            toast.classList.add('show');
+            clearTimeout(window._toastTimer);
+            window._toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+        }
+
+        function waOrderLink(text) {
+            return `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(text)}`;
+        }
+
+        /* ---------------- Contact form ---------------- */
+        function initContactForm() {
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('cf-name').value.trim();
+                const phone = document.getElementById('cf-phone').value.trim();
+                const message = document.getElementById('cf-message').value.trim();
+                if (!name || !phone || !message) {
+                    showToast('Please fill all fields');
+                    return;
+                }
+                const msg = `Hi Shehzad Sweets & Bakers!\n\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`;
+                window.open(waOrderLink(msg), '_blank');
+                form.reset();
+                showToast('Opening WhatsApp to send your message...');
+            });
+        }
+
+        /* ---------------- Populate contact info ---------------- */
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('addr').textContent = BRAND.address;
+            document.getElementById('phoneLink').textContent = BRAND.phone;
+            document.getElementById('phoneLink').href = 'tel:+' + BRAND.phone;
+            document.getElementById('waLink').href = waOrderLink('Hi Shehzad Sweets & Bakers! I have a question.');
+            document.getElementById('minOrderTxt').textContent = `Rs ${BRAND.minOrder} for free home delivery`;
+            document.getElementById('fbLink').href = BRAND.facebook;
+            document.getElementById('directionsLink').href = BRAND.mapLink;
+
+            initContactForm();
+        });
+    </script>
+
+</body>
+</html>

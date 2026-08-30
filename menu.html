@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Menu | Shehzad Sweets &amp; Bakers</title>
+    <meta name="description" content="Browse the full Shehzad Sweets & Bakers menu — pizzas, burgers, shawarma, wings, nuggets and more. Order directly on WhatsApp." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ============================================================
+           SHEHZAD SWEETS & BAKERS — MILA MIAMI INSPIRED
+           Same design system as index page
+           ============================================================ */
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #0A0807;
+            color: #F5F0EB;
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 15.5px;
+            line-height: 1.65;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+        }
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 800;
+            line-height: 1.15;
+            color: #FFFFFF;
+            letter-spacing: -0.01em;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #13100E;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C9A84C;
+            border-radius: 8px;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #C9A84C;
+        }
+        .eyebrow::before {
+            content: '';
+            width: 28px;
+            height: 1.5px;
+            background: #C9A84C;
+            border-radius: 4px;
+        }
+
+        /* ── buttons (SQUARE, MILA style) ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 14px 32px;
+            border-radius: 0;
+            border: 1px solid transparent;
+            transition: all 0.25s ease;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            min-width: 140px;
+        }
+        .btn svg {
+            width: 17px;
+            height: 17px;
+            flex-shrink: 0;
+        }
+
+        .btn-primary {
+            background: #8B1A1A;
+            color: #fff;
+            box-shadow: 0 8px 24px -8px rgba(139, 26, 26, 0.5);
+        }
+        .btn-primary:hover {
+            background: #6E1414;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px -8px rgba(139, 26, 26, 0.6);
+        }
+
+        .btn-gold {
+            background: #C9A84C;
+            color: #0A0807;
+            box-shadow: 0 8px 24px -8px rgba(201, 168, 76, 0.4);
+        }
+        .btn-gold:hover {
+            background: #D4B85E;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px -8px rgba(201, 168, 76, 0.5);
+        }
+
+        .btn-outline {
+            border-color: rgba(245, 240, 235, 0.25);
+            color: #F5F0EB;
+            background: transparent;
+        }
+        .btn-outline:hover {
+            border-color: #C9A84C;
+            color: #C9A84C;
+            background: rgba(201, 168, 76, 0.06);
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 12px;
+            min-width: 100px;
+        }
+        .btn-block {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* ── HEADER ── */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            background: rgba(10, 8, 7, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.10);
+        }
+
+        .header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 24px;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .brand-badge {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        .brand-text strong {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: -0.01em;
+        }
+        .brand-text strong em {
+            color: #C9A84C;
+            font-style: normal;
+        }
+        .brand-text span {
+            font-size: 8.5px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #C9A84C;
+            margin-top: 2px;
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            color: #A89888;
+            position: relative;
+            padding: 6px 0;
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #C9A84C;
+        }
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #C9A84C;
+            border-radius: 2px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .cart-btn {
+            position: relative;
+            width: 42px;
+            height: 42px;
+            border-radius: 0;
+            background: #1C1714;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(201, 168, 76, 0.12);
+            transition: border-color 0.2s ease;
+        }
+        .cart-btn:hover {
+            border-color: #C9A84C;
+        }
+        .cart-btn svg {
+            width: 19px;
+            height: 19px;
+            color: #C9A84C;
+        }
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #8B1A1A;
+            color: #fff;
+            font-size: 9.5px;
+            font-weight: 700;
+            width: 19px;
+            height: 19px;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(139, 26, 26, 0.4);
+        }
+
+        .hamburger {
+            display: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 0;
+            background: #1C1714;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(201, 168, 76, 0.10);
+            flex-shrink: 0;
+        }
+        .hamburger svg {
+            width: 19px;
+            height: 19px;
+            color: #C9A84C;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background: #13100E;
+            border-top: 1px solid rgba(201, 168, 76, 0.06);
+            padding: 8px 24px 22px;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        .mobile-nav a {
+            padding: 14px 2px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #F5F0EB;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.05);
+        }
+        .mobile-nav a.active {
+            color: #C9A84C;
+        }
+        .mobile-nav .btn {
+            margin-top: 16px;
+        }
+        body.nav-open .mobile-nav {
+            display: flex;
+        }
+
+        /* ── PAGE HERO ── */
+        .page-hero {
+            padding: 70px 0 56px;
+            background:
+                radial-gradient(circle at 12% 20%, rgba(139, 26, 26, 0.18), transparent 45%),
+                radial-gradient(circle at 90% 10%, rgba(201, 168, 76, 0.08), transparent 40%);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+            text-align: center;
+        }
+        .page-hero .eyebrow {
+            justify-content: center;
+        }
+        .page-hero h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            margin-top: 16px;
+        }
+        .page-hero p {
+            margin-top: 14px;
+            color: #A89888;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 15.5px;
+        }
+
+        /* ── Sections ── */
+        .section {
+            padding: 78px 0;
+        }
+        .section-alt {
+            background: #13100E;
+        }
+
+        /* ── Menu tabs ── */
+        .tab-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 46px;
+        }
+        .tab-btn {
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            padding: 11px 24px;
+            border-radius: 0;
+            color: #A89888;
+            background: transparent;
+            border: 1px solid rgba(201, 168, 76, 0.08);
+            transition: all 0.25s ease;
+        }
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: #C9A84C;
+            color: #0A0807;
+            border-color: #C9A84C;
+        }
+        .tab-panel {
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+            animation: fadein 0.45s ease;
+        }
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .tab-group-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22px;
+            color: #E8D5A8;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+        .tab-group-title:first-child {
+            margin-top: 0;
+        }
+
+        /* ── Menu cards (SQUARE, MILA style) ── */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .menu-card {
+            background: #1C1714;
+            border: 1px solid rgba(201, 168, 76, 0.06);
+            border-radius: 0;
+            overflow: hidden;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(201, 168, 76, 0.2);
+            box-shadow: 0 20px 44px -16px rgba(0, 0, 0, 0.7);
+        }
+
+        .menu-card-img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: linear-gradient(135deg, #2A221C, #1B1613);
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            transition: transform 0.4s ease;
+        }
+        .menu-card:hover .menu-card-img img {
+            transform: scale(1.03);
+        }
+        .menu-card-img .ph {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5A4D42;
+        }
+        .menu-card-img .ph svg {
+            width: 34px;
+            height: 34px;
+        }
+        .menu-card-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #8B1A1A;
+            color: #fff;
+            font-size: 9.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 4px 12px;
+            border-radius: 0;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-card-body {
+            padding: 18px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+        }
+        .menu-card-body h4 {
+            font-size: 16.5px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+        }
+        .menu-card-body p {
+            font-size: 12.8px;
+            color: #A89888;
+            line-height: 1.5;
+            min-height: 18px;
+        }
+
+        .menu-card-foot {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(201, 168, 76, 0.06);
+        }
+        .menu-price {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #C9A84C;
+        }
+        .menu-price small {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            color: #A89888;
+            font-weight: 500;
+        }
+
+        .menu-card-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .icon-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 0;
+            background: #13100E;
+            border: 1px solid rgba(201, 168, 76, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        .icon-btn:hover {
+            border-color: #C9A84C;
+            background: rgba(201, 168, 76, 0.08);
+        }
+        .icon-btn svg {
+            width: 16px;
+            height: 16px;
+            color: #C9A84C;
+        }
+        .icon-btn.wa {
+            background: #25D366;
+            border-color: #25D366;
+        }
+        .icon-btn.wa svg {
+            color: #fff;
+        }
+        .icon-btn.wa:hover {
+            background: #1fb955;
+            border-color: #1fb955;
+        }
+
+        .size-price-row {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 2px;
+        }
+        .size-chip {
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #A89888;
+            background: #13100E;
+            border: 1px solid rgba(201, 168, 76, 0.06);
+            border-radius: 0;
+            padding: 3px 10px;
+        }
+        .size-chip b {
+            color: #E8D5A8;
+        }
+
+        /* ── CTA band ── */
+        .cta-band {
+            background: linear-gradient(135deg, #8B1A1A 0%, #5E1111 100%);
+            padding: 72px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(201, 168, 76, 0.06), transparent 60%);
+            pointer-events: none;
+        }
+        .cta-band h2 {
+            color: #fff;
+            font-size: clamp(30px, 4.6vw, 46px);
+            position: relative;
+        }
+        .cta-band p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 12px;
+            font-size: 15.5px;
+            position: relative;
+        }
+        .cta-band .btn {
+            margin-top: 28px;
+            position: relative;
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: #13100E;
+            border-top: 1px solid rgba(201, 168, 76, 0.06);
+            padding: 60px 0 28px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.06);
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .footer-brand strong {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 19px;
+            color: #FFFFFF;
+        }
+        .footer-brand strong em {
+            color: #C9A84C;
+            font-style: normal;
+        }
+        .footer-col p {
+            color: #A89888;
+            font-size: 13.5px;
+            line-height: 1.7;
+            max-width: 260px;
+        }
+        .footer-col h5 {
+            font-size: 12px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #C9A84C;
+            margin-bottom: 16px;
+            font-weight: 700;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .footer-col a {
+            display: block;
+            font-size: 13.5px;
+            color: #A89888;
+            padding: 5px 0;
+            transition: color 0.2s ease;
+        }
+        .footer-col a:hover {
+            color: #C9A84C;
+        }
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border-radius: 0;
+            background: #1C1714;
+            border: 1px solid rgba(201, 168, 76, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+        .footer-social a:hover {
+            border-color: #C9A84C;
+            background: rgba(201, 168, 76, 0.06);
+        }
+        .footer-social a svg {
+            width: 16px;
+            height: 16px;
+            color: #C9A84C;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-top: 22px;
+            font-size: 12px;
+            color: #5A4D42;
+        }
+
+        /* ── WhatsApp FAB ── */
+        .wa-fab {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 300;
+            width: 60px;
+            height: 60px;
+            border-radius: 0;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 14px 32px -10px rgba(37, 211, 102, 0.55);
+            transition: transform 0.2s ease;
+            animation: pulse 2.8s ease-in-out infinite;
+        }
+        .wa-fab:hover {
+            transform: scale(1.05);
+        }
+        .wa-fab svg {
+            width: 30px;
+            height: 30px;
+            color: #fff;
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.06);
+            }
+        }
+
+        /* ── Toast ── */
+        .toast {
+            position: fixed;
+            bottom: 96px;
+            right: 24px;
+            z-index: 400;
+            background: #1C1714;
+            border: 1px solid #C9A84C;
+            color: #F5F0EB;
+            padding: 14px 22px;
+            border-radius: 0;
+            font-size: 13.5px;
+            font-weight: 600;
+            box-shadow: 0 20px 44px -12px rgba(0, 0, 0, 0.7);
+            transform: translateY(16px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 980px) {
+            .nav-links,
+            .header-actions .cart-btn {
+                display: none;
+            }
+            .header-actions {
+                gap: 8px;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-hero h1 {
+                font-size: clamp(28px, 8vw, 38px);
+            }
+            .page-hero p {
+                font-size: 14px;
+            }
+            .hero-actions .btn {
+                font-size: 13px;
+                padding: 12px 20px;
+                min-width: 120px;
+            }
+            .brand-text strong {
+                font-size: 16px;
+            }
+            .brand-text span {
+                font-size: 7px;
+            }
+            .brand-badge {
+                width: 38px;
+                height: 38px;
+            }
+            .section {
+                padding: 56px 0;
+            }
+            .cta-band {
+                padding: 50px 0;
+            }
+            .menu-card-body h4 {
+                font-size: 15px;
+            }
+            .menu-price {
+                font-size: 16px;
+            }
+            .tab-btn {
+                font-size: 12px;
+                padding: 9px 16px;
+            }
+        }
+
+        .deal-card .menu-card-badge {
+            background: #C9A84C;
+            color: #0A0807;
+        }
+    </style>
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='29' fill='%238B1A1A' stroke='%23C9A84C' stroke-width='2'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+    <div id="icon-sprite"></div>
+    <header id="site-header" class="site-header"></header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="eyebrow">Full Menu</span>
+            <h1>Everything We Make</h1>
+            <p>Tap the WhatsApp icon on any card to order it directly, or the + to add it to your cart.</p>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section">
+        <div class="container">
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="pizzas">Pizzas</button>
+                <button class="tab-btn" data-tab="burgers">Burgers</button>
+                <button class="tab-btn" data-tab="shawarma">Shawarma &amp; Paratha</button>
+                <button class="tab-btn" data-tab="crispy">Crispy, Wings &amp; Nuggets</button>
+                <button class="tab-btn" data-tab="sides">Fries &amp; Pasta</button>
+                <button class="tab-btn" data-tab="fastfood">Fast Food</button>
+            </div>
+
+            <div class="tab-panel active" id="tab-pizzas">
+                <h3 class="tab-group-title">Classic Pizzas</h3>
+                <div class="menu-grid" id="grid-pizzas-classic"></div>
+                <h3 class="tab-group-title">Shehzad Special Flavors</h3>
+                <div class="menu-grid" id="grid-pizzas-special"></div>
+                <h3 class="tab-group-title">Extra Topping</h3>
+                <div class="menu-grid" id="grid-pizzas-extra"></div>
+            </div>
+
+            <div class="tab-panel" id="tab-burgers">
+                <h3 class="tab-group-title">Burgers</h3>
+                <div class="menu-grid" id="grid-burgers"></div>
+                <h3 class="tab-group-title">Fruit Salad</h3>
+                <div class="menu-grid" id="grid-fruitsalad"></div>
+            </div>
+
+            <div class="tab-panel" id="tab-shawarma">
+                <h3 class="tab-group-title">Shawarma &amp; Paratha Rolls</h3>
+                <div class="menu-grid" id="grid-shawarma"></div>
+            </div>
+
+            <div class="tab-panel" id="tab-crispy">
+                <h3 class="tab-group-title">Crispy Chicken</h3>
+                <div class="menu-grid" id="grid-crispy"></div>
+                <h3 class="tab-group-title">Hot Wings &amp; Hot Shots</h3>
+                <div class="menu-grid" id="grid-wings"></div>
+                <h3 class="tab-group-title">Nuggets</h3>
+                <div class="menu-grid" id="grid-nuggets"></div>
+            </div>
+
+            <div class="tab-panel" id="tab-sides">
+                <h3 class="tab-group-title">Fries</h3>
+                <div class="menu-grid" id="grid-fries"></div>
+                <h3 class="tab-group-title">Pasta</h3>
+                <div class="menu-grid" id="grid-pasta"></div>
+            </div>
+
+            <div class="tab-panel" id="tab-fastfood">
+                <p style="text-align:center;color:#A89888;margin-bottom:26px;font-size:13.5px;">Prices for these items were not visible on our menu board — tap order to ask us directly.</p>
+                <div class="menu-grid" id="grid-fastfood"></div>
+            </div>
+
+            <p style="text-align:center;margin-top:40px;font-size:12.5px;color:#5A4D42;">Some items marked <b>Ask Price</b> — please confirm on WhatsApp before ordering.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+        <div class="container">
+            <h2>Building a family order?</h2>
+            <p>Check out our combo deals — more food, better price.</p>
+            <a href="deals.html" class="btn btn-gold">View Value Deals <svg><use href="#ic-arrow" /></svg></a>
+        </div>
+    </section>
+
+    <footer id="site-footer"></footer>
+
+    <script>
+        /* ============================================================
+               BRAND CONFIG
+               ============================================================ */
+
+        const BRAND = {
+            name: "Shehzad Sweets & Bakers",
+            tagline: "The Taste You Never Forget",
+            phone: "03043737337",
+            whatsapp: "923043737337",
+            address: "Dhobi Bazar, Gogera Plaza, Near Ahl-e-Hadis Chowk, Bangla Gogera",
+            minOrder: 500,
+            facebook: "https://facebook.com/",
+            mapLink: "https://www.google.com/maps/search/?api=1&query=Shehzad+Sweets+Bakers+Dhobi+Bazar+Gogera+Plaza+Bangla+Gogera"
+        };
+
+        /* ============================================================
+               PRODUCT DATA — exact same as before
+               ============================================================ */
+
+        const PIZZAS_CLASSIC = [
+            { id: "pz-tikka", name: "Chicken Tikka", desc: "Spiced chicken tikka chunks, mozzarella, house sauce",
+                image: "menu-pizza1.jpg", price: { small: 500, medium: 900, large: 1300 } },
+            { id: "pz-fajita", name: "Chicken Fajita", desc: "Smoky fajita chicken, bell peppers, onions",
+                image: "menu-pizza2.jpg", price: { small: 500, medium: 900, large: 1300 } },
+            { id: "pz-supreme", name: "Chicken Supreme", desc: "Loaded chicken, capsicum, olives, mozzarella",
+                image: "menu-pizza3.jpg", price: { small: 500, medium: 900, large: 1300 } },
+            { id: "pz-hotspicy", name: "Hot-N-Spicy", desc: "Fiery chicken, jalapeños, red chili flakes",
+                image: "menu-pizza4.jpg", price: { small: 500, medium: 900, large: 1300 } },
+            { id: "pz-achari", name: "Chicken Achari", desc: "Tangy pickle-spiced chicken pizza",
+                image: "menu-pizza5.jpg", price: { small: 500, medium: 900, large: 1300 } },
+            { id: "pz-lover", name: "Chicken Lover", desc: "Extra chicken, extra cheese, for the true lover",
+                image: "menu-pizza6.jpg", price: { small: 500, medium: 900, large: 1300 } },
+            { id: "pz-veg", name: "Vegetarian Pizza", desc: "Garden fresh vegetables, mozzarella",
+                image: "menu-pizza7.jpg", price: { small: 500, medium: 900, large: 1300 } },
+        ];
+
+        const PIZZAS_SPECIAL = [
+            { id: "pz-malaiboti", name: "Chicken Malai Boti", desc: "Creamy malai boti, signature Shehzad blend",
+                image: "menu-pizza8.jpg", price: { small: 600, medium: 1100, large: 1500 } },
+            { id: "pz-behari", name: "Behari Kabab", desc: "Behari kabab strips, onions, mozzarella",
+                image: "menu-pizza9.jpg", price: { small: 600, medium: 1100, large: 1500 } },
+            { id: "pz-cheesestf", name: "Cheese Stuffer", desc: "Cheese-stuffed crust, loaded chicken topping",
+                image: "menu-pizza10.jpg", price: { small: 600, medium: 1100, large: 1500 } },
+            { id: "pz-royal", name: "Royal Crust Pizza", desc: "Signature royal crust, chef's special topping mix",
+                image: "menu-pizza11.jpg", price: { small: 600, medium: 1100, large: 1500 } },
+            { id: "pz-special", name: "Shehzad Special Pizza", desc: "The house special — everything, all at once",
+                image: "menu-pizza12.jpg", price: { small: 600, medium: 1100, large: 1500 } },
+        ];
+
+        const EXTRA_TOPPING = { id: "pz-extratopping", name: "Extra Topping",
+            desc: "Add extra topping to any pizza size", image: "menu-topping1.jpg", price: { "7in": 70, "10in": 100,
+                "13in": 130 } };
+
+        const BURGERS = [
+            { id: "bg-zinger", name: "Zinger Burger", desc: "Crispy zinger fillet, fresh lettuce, mayo",
+                image: "menu-burger1.jpg", price: 300 },
+            { id: "bg-zingercheese", name: "Zinger Cheese Burger", desc: "Zinger fillet loaded with melted cheese",
+                image: "menu-burger2.jpg", price: 360 },
+            { id: "bg-petty", name: "Petty Burger", desc: "Classic chicken patty burger", image: "menu-burger3.jpg",
+                price: 250 },
+            { id: "bg-chapli", name: "Chapli Burger", desc: "Spiced chapli kabab patty burger",
+                image: "menu-burger4.jpg", price: 250 },
+            { id: "bg-tower", name: "Tower Burger", desc: "Double-stacked tall tower burger",
+                image: "menu-burger5.jpg", price: 400 },
+            { id: "bg-towercheese", name: "Tower Cheese Burger", desc: "Tower burger loaded with extra cheese",
+                image: "menu-burger6.jpg", price: 450 },
+        ];
+
+        const FRUIT_SALAD = { id: "bg-fruitsalad", name: "Fruit Salad", desc: "Fresh seasonal fruit salad",
+            image: "menu-fruitsalad1.jpg", price: { "250gm": 300, "500gm": 600, "1000gm": 1200 } };
+
+        const SHAWARMA_PARATHA = [
+            { id: "sw-chicken", name: "Chicken Shawarma", desc: "Classic chicken shawarma roll",
+                image: "menu-shawarma1.jpg", price: 200 },
+            { id: "sw-chickencheese", name: "Chicken Cheese Shawarma", desc: "Chicken shawarma with melted cheese",
+                image: "menu-shawarma2.jpg", price: 260 },
+            { id: "sw-zinger", name: "Zinger Shawarma", desc: "Crispy zinger shawarma roll",
+                image: "menu-shawarma3.jpg", price: 300 },
+            { id: "sw-zingercheese", name: "Zinger Cheese Shawarma", desc: "Zinger shawarma loaded with cheese",
+                image: "menu-shawarma4.jpg", price: 360 },
+            { id: "sw-paratharoll", name: "Chicken Paratha Roll", desc: "Chicken roll wrapped in fresh paratha",
+                image: "menu-paratha1.jpg", price: 300 },
+            { id: "sw-parathacheese", name: "Chicken Cheese Paratha", desc: "Chicken cheese paratha roll",
+                image: "menu-paratha2.jpg", price: 360 },
+            { id: "sw-zingerparatha", name: "Zinger Paratha", desc: "Zinger fillet paratha roll",
+                image: "menu-paratha3.jpg", price: 320 },
+            { id: "sw-zingerparathacheese", name: "Zinger Cheese Paratha", desc: "Zinger cheese paratha roll",
+                image: "menu-paratha4.jpg", price: 380 },
+        ];
+
+        const CRISPY_CHICKEN = [
+            { id: "cc-1pc", name: "Crispy Chicken — 1 Piece", desc: "Single crispy fried chicken piece",
+                image: "menu-crispy1.jpg", price: 160 },
+            { id: "cc-3pc", name: "Crispy Chicken — 3 Pieces", desc: "Three crispy fried chicken pieces",
+                image: "menu-crispy2.jpg", price: 250 },
+            { id: "cc-zingerpc", name: "Zinger Piece", desc: "Single zinger-spiced fried piece",
+                image: "menu-crispy3.jpg", price: 480 },
+        ];
+
+        const HOT_WINGS = [
+            { id: "hw-5pc", name: "Hot Wings — 5 Pieces", desc: "Five spicy hot wings", image: "menu-wings1.jpg",
+                price: 270 },
+            { id: "hw-10pc", name: "Hot Wings — 10 Pieces", desc: "Ten spicy hot wings", image: "menu-wings2.jpg",
+                price: 500 },
+        ];
+
+        const HOT_SHOTS = { id: "hs-10pc", name: "Hot Shots — 10 Pieces", desc: "Ten crunchy hot shots",
+            image: "menu-hotshots1.jpg", price: 540 };
+
+        const NUGGETS = [
+            { id: "ng-5pc", name: "Nuggets — 5 Pieces", desc: "Five golden chicken nuggets",
+                image: "menu-nuggets1.jpg", price: 270 },
+            { id: "ng-10pc", name: "Nuggets — 10 Pieces", desc: "Ten golden chicken nuggets",
+                image: "menu-nuggets2.jpg", price: 500 },
+        ];
+
+        const FRIES = { id: "sd-fries", name: "Fries", desc: "Golden crispy fries", image: "menu-fries1.jpg",
+            price: { small: 200, medium: 300, large: 400 } };
+
+        const PASTA = [
+            { id: "ps-student", name: "Student Pasta", desc: "Creamy pasta, budget-friendly portion",
+                image: "menu-pasta1.jpg", price: 550 },
+            { id: "ps-large", name: "Large Pasta", desc: "Full-size creamy pasta", image: "menu-pasta2.jpg",
+                price: 700 },
+        ];
+
+        const FAST_FOOD = [
+            { id: "ff-simple", name: "Simple Sandwich", desc: "", image: "menu-sandwich1.jpg", price: null },
+            { id: "ff-goal", name: "Goal Sandwich", desc: "", image: "menu-sandwich2.jpg", price: null },
+            { id: "ff-takoni", name: "Takoni Sandwich", desc: "", image: "menu-sandwich3.jpg", price: null },
+            { id: "ff-club", name: "Club Sandwich", desc: "", image: "menu-sandwich4.jpg", price: null },
+            { id: "ff-eggfry", name: "Egg Fry Sandwich", desc: "", image: "menu-sandwich5.jpg", price: null },
+            { id: "ff-fryburger", name: "Fry Burger", desc: "", image: "menu-sandwich6.jpg", price: null },
+            { id: "ff-botiburger", name: "Boti Burger", desc: "", image: "menu-sandwich7.jpg", price: null },
+            { id: "ff-samosa", name: "Chicken Samosa", desc: "", image: "menu-sandwich8.jpg", price: null },
+            { id: "ff-tikka", name: "Tikka", desc: "", image: "menu-sandwich9.jpg", price: null },
+            { id: "ff-drumstick", name: "Drum Stick", desc: "", image: "menu-sandwich10.jpg", price: null },
+            { id: "ff-chaplikabab", name: "Chapli Kabab", desc: "", image: "menu-sandwich11.jpg", price: null },
+        ];
+
+        /* ============================================================
+           SHARED LAYOUT: header, footer, icon sprite, WhatsApp FAB
+           ============================================================ */
+
+        const ICON_SPRITE = `
+        <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+        <defs>
+          <symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></symbol>
+          <symbol id="ic-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.46-.15-.65.15-.2.29-.75.93-.92 1.12-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.08-.15-.65-1.58-.9-2.16-.24-.58-.48-.5-.65-.5-.17-.01-.37-.01-.56-.01-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.7-.7 1.94-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.2-.55-.34z"/><path d="M12 2a10 10 0 00-8.6 15.03L2 22l5.11-1.34A10 10 0 1012 2zm0 18.13a8.09 8.09 0 01-4.14-1.13l-.3-.18-3.08.81.82-3-.19-.31A8.13 8.13 0 1112 20.13z"/></symbol>
+          <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+          <symbol id="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+          <symbol id="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></symbol>
+          <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+          <symbol id="ic-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></symbol>
+          <symbol id="ic-bike" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M5.5 17.5L9 8h5l3 5.5M9 8L7 5H4"/><path d="M12 8l3 5.5h3.5"/></symbol>
+          <symbol id="ic-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></symbol>
+          <symbol id="ic-fire" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 3-2 4-2 7a3 3 0 006 0c0-1-.5-2-1-2 2 1 4 3.5 4 6.5A7 7 0 015 13.5C5 9 8 7 8 4c1.5 1 2 2.5 1.5 4C10.5 5.5 11 3.5 12 2z"/></symbol>
+          <symbol id="ic-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+          <symbol id="ic-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></symbol>
+        </defs>
+        </svg>`;
+
+        function LOGO_SVG(cls) {
+            return `<svg class="${cls || ''}" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="29" fill="#8B1A1A"/>
+            <circle cx="30" cy="30" r="29" fill="none" stroke="#C9A84C" stroke-width="1.4"/>
+            <circle cx="30" cy="30" r="24.5" fill="none" stroke="#C9A84C" stroke-width="0.6" opacity="0.4"/>
+            <path d="M12 30a18 18 0 0136 0" fill="none" stroke="#C9A84C" stroke-width="0.6" opacity="0.3"/>
+            <path d="M12 30a18 18 0 0036 0" fill="none" stroke="#C9A84C" stroke-width="0.6" opacity="0.3"/>
+            <circle cx="30" cy="10.5" r="1.1" fill="#C9A84C"/>
+            <circle cx="30" cy="49.5" r="1.1" fill="#C9A84C"/>
+            <text x="30" y="39" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="25" fill="#E8D5A8" text-anchor="middle">S</text>
+          </svg>`;
+        }
+
+        function navLink(href, label) {
+            const current = window.location.pathname.split('/').pop() || 'index.html';
+            const isActive = current === href ? ' class="active"' : '';
+            return `<a href="${href}"${isActive}>${label}</a>`;
+        }
+
+        function buildHeader() {
+            const links = [
+                ['index.html', 'Home'],
+                ['menu.html', 'Menu'],
+                ['deals.html', 'Deals'],
+                ['cakes.html', 'Custom Cakes'],
+                ['services.html', 'Services'],
+                ['about.html', 'About'],
+                ['contact.html', 'Contact']
+            ];
+            return `
+          <div class="header-row">
+            <a href="index.html" class="brand">
+              ${LOGO_SVG('brand-badge')}
+              <span class="brand-text"><strong>Shehzad <em>Sweets</em> &amp; Bakers</strong><span>Fresh Pizza &amp; Fast Food</span></span>
+            </a>
+            <nav class="nav-links">${links.map(l => navLink(l[0], l[1])).join('')}</nav>
+            <div class="header-actions">
+              <a href="cart.html" class="cart-btn" aria-label="Cart"><svg><use href="#ic-cart"/></svg><span class="cart-count" id="cartCountBadge">0</span></a>
+              <a href="#" class="btn btn-primary btn-sm wa-order-link"><svg><use href="#ic-whatsapp"/></svg>Order</a>
+              <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><svg><use href="#ic-menu"/></svg></button>
+            </div>
+          </div>
+          <div class="mobile-nav" id="mobileNav">
+            ${links.map(l => navLink(l[0], l[1])).join('')}
+            <a href="cart.html">🛒 Cart (<span id="cartCountBadgeMobile">0</span>)</a>
+            <a href="#" class="btn btn-primary btn-block wa-order-link"><svg><use href="#ic-whatsapp"/></svg>Order on WhatsApp</a>
+          </div>`;
+        }
+
+        function buildFooter() {
+            return `
+          <div class="container">
+            <div class="footer-grid">
+              <div class="footer-col">
+                <div class="footer-brand">
+                  ${LOGO_SVG('brand-badge')}
+                  <strong>Shehzad <em>Sweets</em> &amp; Bakers</strong>
+                </div>
+                <p>Fresh pizza, burgers, shawarma, wings and family deals — fried and baked fresh, delivered hot across Bangla Gogera.</p>
+                <div class="footer-social">
+                  <a href="${BRAND.facebook}" target="_blank" aria-label="Facebook"><svg><use href="#ic-fb"/></svg></a>
+                  <a href="https://wa.me/${BRAND.whatsapp}" target="_blank" aria-label="WhatsApp"><svg><use href="#ic-whatsapp"/></svg></a>
+                </div>
+              </div>
+              <div class="footer-col">
+                <h5>Explore</h5>
+                <a href="menu.html">Full Menu</a>
+                <a href="deals.html">Value Deals</a>
+                <a href="cakes.html">Custom Cakes</a>
+                <a href="services.html">Services</a>
+              </div>
+              <div class="footer-col">
+                <h5>Company</h5>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Your Cart</a>
+              </div>
+              <div class="footer-col">
+                <h5>Get In Touch</h5>
+                <a href="tel:+${BRAND.phone}">📞 ${BRAND.phone}</a>
+                <a href="https://wa.me/${BRAND.whatsapp}" target="_blank">💬 WhatsApp Order</a>
+                <p style="margin-top:6px;">${BRAND.address}</p>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <span>© 2026 Shehzad Sweets &amp; Bakers. All rights reserved.</span>
+              <span>${BRAND.tagline}</span>
+            </div>
+          </div>`;
+        }
+
+        function initLayout() {
+            document.getElementById('icon-sprite').innerHTML = ICON_SPRITE;
+            document.getElementById('site-header').innerHTML = buildHeader();
+            document.getElementById('site-footer').innerHTML = buildFooter();
+
+            const fab = document.createElement('a');
+            fab.href =
+                `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent('Hi Shehzad Sweets & Bakers! I want to place an order.')}`;
+            fab.target = '_blank';
+            fab.className = 'wa-fab';
+            fab.setAttribute('aria-label', 'Order on WhatsApp');
+            fab.innerHTML = '<svg><use href="#ic-whatsapp"/></svg>';
+            document.body.appendChild(fab);
+
+            document.querySelectorAll('.wa-order-link').forEach(a => {
+                a.href =
+                    `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent('Hi Shehzad Sweets & Bakers! I want to place an order.')}`;
+                a.target = '_blank';
+            });
+
+            const hb = document.getElementById('hamburgerBtn');
+            if (hb) {
+                hb.addEventListener('click', () => {
+                    document.body.classList.toggle('nav-open');
+                    hb.innerHTML = document.body.classList.contains('nav-open') ?
+                        '<svg><use href="#ic-close"/></svg>' :
+                        '<svg><use href="#ic-menu"/></svg>';
+                });
+            }
+
+            updateCartBadge();
+        }
+
+        document.addEventListener('DOMContentLoaded', initLayout);
+
+        /* ============================================================
+           CART & TOAST
+           ============================================================ */
+
+        const CART_KEY = 'sfp_cart';
+
+        function getCart() {
+            try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch (e) { return []; }
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem(CART_KEY, JSON.stringify(cart));
+            updateCartBadge();
+        }
+
+        function updateCartBadge() {
+            const count = getCart().reduce((sum, i) => sum + i.qty, 0);
+            document.querySelectorAll('#cartCountBadge,#cartCountBadgeMobile').forEach(el => {
+                if (el) el.textContent = count;
+            });
+        }
+
+        function addToCart(item) {
+            const cart = getCart();
+            const existing = cart.find(i => i.id === item.id && i.variant === item.variant);
+            if (existing) { existing.qty += 1; } else { cart.push({ id: item.id, name: item.name, variant: item.variant || '',
+                    price: item.price, image: item.image, qty: 1 }); }
+            saveCart(cart);
+            showToast(`${item.name}${item.variant ? ' ('+item.variant+')' : ''} added to cart`);
+        }
+
+        function showToast(msg) {
+            let toast = document.querySelector('.toast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.className = 'toast';
+                document.body.appendChild(toast);
+            }
+            toast.textContent = msg;
+            toast.classList.add('show');
+            clearTimeout(window._toastTimer);
+            window._toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+        }
+
+        function waOrderLink(text) {
+            return `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(text)}`;
+        }
+
+        function orderSingleItem(item, variant, price) {
+            const priceTxt = (price === null || price === undefined) ? '(please confirm price)' : `— Rs ${price}`;
+            const variantTxt = variant ? ` (${variant})` : '';
+            const msg =
+                `Hi Shehzad Sweets & Bakers! I want to order:\n${item.name}${variantTxt} ${priceTxt}\n\nPlease confirm my order.`;
+            window.open(waOrderLink(msg), '_blank');
+        }
+
+        /* ---------------- Menu card builder ---------------- */
+        function menuCardHTML(item, opts) {
+            opts = opts || {};
+            const hasSizes = item.price && typeof item.price === 'object';
+            const singlePrice = hasSizes ? null : item.price;
+
+            let priceBlock;
+            if (hasSizes) {
+                const rows = Object.entries(item.price).map(([size, p]) =>
+                    `<span class="size-chip">${size}: <b>Rs ${p}</b></span>`
+                ).join('');
+                priceBlock = `<div class="size-price-row">${rows}</div>`;
+            } else if (singlePrice === null || singlePrice === undefined) {
+                priceBlock = `<span class="menu-price" style="font-size:14px;">Ask Price</span>`;
+            } else {
+                priceBlock = `<span class="menu-price">Rs ${singlePrice}</span>`;
+            }
+
+            const badge = item.badge ? `<span class="menu-card-badge">${item.badge}</span>` : (opts.badge ?
+                `<span class="menu-card-badge">${opts.badge}</span>` : '');
+
+            const orderBtn = hasSizes ?
+                `<button class="icon-btn wa" title="Order on WhatsApp" onclick='orderSingleItem(${JSON.stringify(item)}, "${Object.keys(item.price)[0]}", ${item.price[Object.keys(item.price)[0]]})'><svg><use href="#ic-whatsapp"/></svg></button>` :
+                `<button class="icon-btn wa" title="Order on WhatsApp" onclick='orderSingleItem(${JSON.stringify(item)}, "", ${singlePrice})'><svg><use href="#ic-whatsapp"/></svg></button>`;
+
+            const addBtn = (singlePrice === null && !hasSizes) ? '' :
+                `<button class="icon-btn" title="Add to cart" onclick='addToCart({id:"${item.id}",name:${JSON.stringify(item.name)},variant:"${hasSizes ? Object.keys(item.price)[0] : ''}",price:${hasSizes ? item.price[Object.keys(item.price)[0]] : singlePrice},image:"${item.image||''}"})'><svg><use href="#ic-plus"/></svg></button>`;
+
+            return `
+          <div class="menu-card">
+            <div class="menu-card-img">
+              <img src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="ph" style="display:none;"><svg><use href="#ic-image"/></svg></div>
+              ${badge}
+            </div>
+            <div class="menu-card-body">
+              <h4>${item.name}</h4>
+              ${item.desc ? `<p>${item.desc}</p>` : ''}
+              <div class="menu-card-foot">
+                ${priceBlock}
+                <div class="menu-card-actions">${addBtn}${orderBtn}</div>
+              </div>
+            </div>
+          </div>`;
+        }
+
+        function renderGrid(containerId, items, opts) {
+            const el = document.getElementById(containerId);
+            if (!el) return;
+            el.innerHTML = items.map(i => menuCardHTML(i, opts)).join('');
+        }
+
+        /* ---------------- Tab logic ---------------- */
+        document.addEventListener('DOMContentLoaded', function() {
+            // Render all grids
+            renderGrid('grid-pizzas-classic', PIZZAS_CLASSIC);
+            renderGrid('grid-pizzas-special', PIZZAS_SPECIAL, { badge: 'Special' });
+            renderGrid('grid-pizzas-extra', [EXTRA_TOPPING]);
+            renderGrid('grid-burgers', BURGERS);
+            renderGrid('grid-fruitsalad', [FRUIT_SALAD]);
+            renderGrid('grid-shawarma', SHAWARMA_PARATHA);
+            renderGrid('grid-crispy', CRISPY_CHICKEN);
+            renderGrid('grid-wings', [...HOT_WINGS, HOT_SHOTS]);
+            renderGrid('grid-nuggets', NUGGETS);
+            renderGrid('grid-fries', [FRIES]);
+            renderGrid('grid-pasta', PASTA);
+            renderGrid('grid-fastfood', FAST_FOOD);
+
+            // Tab switching
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const panels = document.querySelectorAll('.tab-panel');
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    panels.forEach(p => p.classList.remove('active'));
+                    const target = document.getElementById('tab-' + this.dataset.tab);
+                    if (target) target.classList.add('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
