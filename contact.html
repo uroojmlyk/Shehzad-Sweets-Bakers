@@ -172,9 +172,7 @@
             justify-content: center;
         }
 
-        /* ═══════════════════════════════════════════════════
-           HEADER — SAME AS INDEX (BIG LOGO)
-           ═══════════════════════════════════════════════════ */
+        /* ── HEADER ── */
         .site-header {
             position: sticky;
             top: 0;
@@ -184,62 +182,57 @@
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(201, 168, 76, 0.12);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
-            width: 100%;
         }
 
         .header-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 8px 20px;
+            padding: 10px 24px;
             max-width: 1180px;
             margin: 0 auto;
-            gap: 12px;
-            min-height: 80px;
-            width: 100%;
+            gap: 16px;
+            min-height: 72px;
         }
 
-        /* ── Brand / Logo — BIG ── */
+        /* ── Brand / Logo ── */
         .brand {
             display: flex;
             align-items: center;
             flex-shrink: 0;
-            gap: 8px;
         }
         .brand-logo {
-            height: 72px;
+            height: 52px;
             width: auto;
             object-fit: contain;
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+            transition: transform 0.3s ease, filter 0.3s ease;
             filter:
-                drop-shadow(0 0 30px rgba(201, 168, 76, 0.3))
-                drop-shadow(0 0 60px rgba(201, 168, 76, 0.15))
-                drop-shadow(0 4px 30px rgba(0, 0, 0, 0.6));
+                drop-shadow(0 0 22px rgba(201, 168, 76, 0.25))
+                drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5));
         }
         .brand-logo:hover {
-            transform: scale(1.06);
+            transform: scale(1.04);
             filter:
-                drop-shadow(0 0 50px rgba(201, 168, 76, 0.5))
-                drop-shadow(0 0 80px rgba(201, 168, 76, 0.25))
-                drop-shadow(0 8px 40px rgba(0, 0, 0, 0.7));
+                drop-shadow(0 0 34px rgba(201, 168, 76, 0.4))
+                drop-shadow(0 6px 26px rgba(0, 0, 0, 0.6));
         }
-
         .brand-text {
             font-family: 'Playfair Display', Georgia, serif;
-            font-weight: 900;
-            font-size: 20px;
+            font-weight: 800;
+            font-size: 18px;
             color: #FFFFFF;
             letter-spacing: 0.04em;
             line-height: 1.1;
         }
         .brand-text span {
-            color: #C9A84C;
             display: block;
-            font-size: 11px;
-            letter-spacing: 0.3em;
+            color: #C9A84C;
+            font-size: 10px;
+            letter-spacing: 0.24em;
             font-weight: 500;
             font-family: 'DM Sans', sans-serif;
             text-transform: uppercase;
+            margin-top: 2px;
         }
 
         .nav-links {
@@ -279,8 +272,8 @@
         }
         .cart-btn {
             position: relative;
-            width: 44px;
-            height: 44px;
+            width: 42px;
+            height: 42px;
             border-radius: 0;
             background: #1C1714;
             display: flex;
@@ -297,8 +290,8 @@
             transform: scale(1.05);
         }
         .cart-btn svg {
-            width: 20px;
-            height: 20px;
+            width: 19px;
+            height: 19px;
             color: #C9A84C;
         }
         .cart-count {
@@ -309,8 +302,8 @@
             color: #fff;
             font-size: 10px;
             font-weight: 700;
-            width: 20px;
-            height: 20px;
+            width: 19px;
+            height: 19px;
             border-radius: 0;
             display: flex;
             align-items: center;
@@ -321,8 +314,8 @@
 
         .hamburger {
             display: none;
-            width: 44px;
-            height: 44px;
+            width: 42px;
+            height: 42px;
             border-radius: 0;
             background: #1C1714;
             align-items: center;
@@ -335,8 +328,8 @@
             border-color: #C9A84C;
         }
         .hamburger svg {
-            width: 20px;
-            height: 20px;
+            width: 19px;
+            height: 19px;
             color: #C9A84C;
         }
 
@@ -345,10 +338,9 @@
             flex-direction: column;
             background: #13100E;
             border-top: 1px solid rgba(201, 168, 76, 0.06);
-            padding: 8px 20px 22px;
+            padding: 8px 24px 22px;
             max-width: 1180px;
             margin: 0 auto;
-            width: 100%;
         }
         .mobile-nav a {
             padding: 14px 2px;
@@ -366,6 +358,7 @@
         body.nav-open .mobile-nav {
             display: flex;
         }
+
 
         /* ── PAGE HERO ── */
         .page-hero {
@@ -583,12 +576,6 @@
                 drop-shadow(0 0 30px rgba(201, 168, 76, 0.25))
                 drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5));
         }
-        .footer-brand .brand-text {
-            font-size: 22px;
-        }
-        .footer-brand .brand-text span {
-            font-size: 11px;
-        }
         .footer-col p {
             color: #A89888;
             font-size: 13.5px;
@@ -739,39 +726,30 @@
             }
 
             .header-row {
-                padding: 8px 16px;
-                min-height: 70px;
-                gap: 10px;
+                padding: 9px 20px;
+                min-height: 68px;
+                gap: 12px;
             }
             .brand-logo {
-                height: 58px;
-            }
-            .brand-text {
-                font-size: 16px;
-            }
-            .brand-text span {
-                font-size: 9px;
+                height: 48px;
             }
             .cart-btn,
             .hamburger {
-                width: 40px;
-                height: 40px;
+                width: 42px;
+                height: 42px;
             }
             .cart-btn svg,
             .hamburger svg {
-                width: 18px;
-                height: 18px;
+                width: 19px;
+                height: 19px;
             }
             .cart-count {
-                width: 18px;
-                height: 18px;
-                font-size: 9px;
+                width: 19px;
+                height: 19px;
+                font-size: 9.5px;
             }
             .footer-brand .brand-logo {
-                height: 64px;
-            }
-            .footer-brand .brand-text {
-                font-size: 18px;
+                height: 62px;
             }
         }
 
@@ -796,36 +774,29 @@
             }
 
             .header-row {
-                padding: 6px 12px;
-                min-height: 62px;
-                gap: 8px;
+                padding: 8px 16px;
+                min-height: 64px;
+                gap: 10px;
             }
             .brand-logo {
-                height: 48px;
-                max-width: 180px;
+                height: 44px;
+                max-width: 200px;
                 object-fit: contain;
-            }
-            .brand-text {
-                font-size: 14px;
-            }
-            .brand-text span {
-                font-size: 8px;
-                letter-spacing: 0.2em;
             }
             .cart-btn,
             .hamburger {
-                width: 38px;
-                height: 38px;
+                width: 40px;
+                height: 40px;
             }
             .cart-btn svg,
             .hamburger svg {
-                width: 17px;
-                height: 17px;
+                width: 18px;
+                height: 18px;
             }
             .cart-count {
-                width: 17px;
-                height: 17px;
-                font-size: 8.5px;
+                width: 18px;
+                height: 18px;
+                font-size: 9px;
                 top: -5px;
                 right: -5px;
             }
@@ -849,12 +820,6 @@
             .footer-brand .brand-logo {
                 height: 56px;
             }
-            .footer-brand .brand-text {
-                font-size: 16px;
-            }
-            .footer-brand .brand-text span {
-                font-size: 9px;
-            }
 
             .mobile-nav {
                 padding: 8px 16px 18px;
@@ -863,34 +828,28 @@
 
         @media (max-width: 400px) {
             .header-row {
-                padding: 4px 10px;
-                min-height: 54px;
-                gap: 6px;
+                padding: 6px 10px;
+                min-height: 60px;
+                gap: 8px;
             }
             .brand-logo {
                 height: 40px;
-                max-width: 140px;
-            }
-            .brand-text {
-                font-size: 12px;
-            }
-            .brand-text span {
-                font-size: 7px;
+                max-width: 170px;
             }
             .cart-btn,
             .hamburger {
-                width: 34px;
-                height: 34px;
+                width: 38px;
+                height: 38px;
             }
             .cart-btn svg,
             .hamburger svg {
-                width: 15px;
-                height: 15px;
+                width: 17px;
+                height: 17px;
             }
             .cart-count {
-                width: 15px;
-                height: 15px;
-                font-size: 7.5px;
+                width: 17px;
+                height: 17px;
+                font-size: 8.5px;
                 top: -4px;
                 right: -4px;
             }
@@ -1076,7 +1035,7 @@
             return `
           <div class="header-row">
             <a href="index.html" class="brand">
-              <img src="shehzad-logo.png" alt="Shehzad Sweets &amp; Bakers" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <img src="shehzad-logo.webp" alt="Shehzad Sweets &amp; Bakers" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
               <div class="brand-text" style="display:none;">SHEHZAD<span>Sweets &amp; Bakers</span></div>
             </a>
             <nav class="nav-links">${links.map(l => navLink(l[0], l[1])).join('')}</nav>
@@ -1099,7 +1058,7 @@
             <div class="footer-grid">
               <div class="footer-col">
                 <div class="footer-brand">
-                  <img src="shehzad-logo.png" alt="Shehzad Sweets &amp; Bakers" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                  <img src="shehzad-logo.webp" alt="Shehzad Sweets &amp; Bakers" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                   <div class="brand-text" style="display:none;">SHEHZAD<span>Sweets &amp; Bakers</span></div>
                 </div>
                 <p>Fresh pizza, burgers, shawarma, wings and family deals: fried and baked fresh, delivered hot across Bangla Gogera.</p>
